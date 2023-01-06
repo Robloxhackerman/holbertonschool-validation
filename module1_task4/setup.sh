@@ -1,4 +1,3 @@
-sudo apt update
-sudo apt -y install hugo
-sudo apt-get -y install make
-make build
+sudo apt-get update
+sudo apt-get -y install hugo
+sudo apt-get -y install build-essential
