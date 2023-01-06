@@ -1,6 +1,4 @@
-sudo apt-get update
-sudo apt install build-essential
-sudo apt install make
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-sudo brew install hugo
+sudo apt update
+sudo apt -y install hugo
+sudo apt-get -y install make
 make build
