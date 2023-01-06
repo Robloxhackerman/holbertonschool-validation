@@ -1,7 +1,7 @@
 build:
 	hugo > /dev/null 2>&1
 
-clean: ## Clean the site's directory
+clean: ## Clean the sites directory
 	rm -fr dist
 
 post:
