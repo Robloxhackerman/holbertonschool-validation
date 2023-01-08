@@ -1,0 +1,23 @@
+name: module3_task1
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: clone
+        uses: actions/checkout@v3
+      - name: execute make help
+        run: cd module3_task0 && make help
+      - name: install
+        run: cd module3_task1 && ./setup.sh
+      - name:  execute make help
+        run: cd module3_task1 && make help
+      - name: Build
+        run: cd module3_task1 && make build
+      - name: Post
+        run: cd module3_task1 && make post POST_NAME=chori POST_TITLE=pan
+      - name: Clean
+        run: cd module3_task1 && make clean
