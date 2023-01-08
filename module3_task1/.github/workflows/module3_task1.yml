@@ -22,4 +22,4 @@ jobs:
       - working-directory: module3_task1
         run: make clean
       - working-directory: module3_task1
-        run: make help
+        run: make helpç
