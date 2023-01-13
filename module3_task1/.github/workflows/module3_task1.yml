@@ -20,4 +20,4 @@ jobs:
       - name: cleanMe
         run: cd module3_task1 && make clean
       - name: helpMePls
-        run:  cd module3_task1 && make help
+        run: cd module3_task1 && make help
