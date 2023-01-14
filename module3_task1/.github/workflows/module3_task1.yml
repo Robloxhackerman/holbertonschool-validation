@@ -9,17 +9,15 @@ jobs:
     steps:
       - name: git clone
         uses: actions/checkout@v3
-      - working-directory: module3_task1
-        run: ./setup.sh
-      - working-directory: module3_task1
-        run: make help
-      - name: BuildMe
-        working-directory: module3_task1
-        run: make build
-      - name: Create a post
-        working-directory: module3_task1
-        run: make POST_NAME=welcome_again POST_TITLE="Welcome again" post
-      - working-directory: module3_task1
-        run: make clean
-      - working-directory: module3_task1
-        run: make help
+      - name: setup
+        run: cd module3_task1 ; ./setup.sh
+      - name: buildMe
+        run: cd module3_task1 ; make build
+      - name: helpMe
+        run: cd module3_task1 ; make help
+      - name: postMe
+        run: cd module3_task1 ; make POST_NAME=pepe POST_TITLE=papo post
+      - name: cleanMe
+        run: cd module3_task1 ; make clean
+      - name: helpMePls
+        run: cd module3_task1 ; make help
