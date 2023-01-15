@@ -1,0 +1,29 @@
+name: module3_task0
+on:
+  schedule:
+    - cron: "0 1 * * *"
+  push:
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: git clone
+        uses: actions/checkout@v3
+      - name: setup
+        working-directory: module3_task1
+        run: ./setup.sh
+      - name: buildMe
+        working-directory: module3_task1
+        run: make build
+      - name: helpMe
+        working-directory: module3_task1
+        run: make help
+      - name: postMe
+        working-directory: module3_task1
+        run: make POST_NAME=pepe POST_TITLE=papo post
+      - name: cleanMe
+        working-directory: module3_task1
+        run: make clean
+      - name: helpMePls
+        working-directory: module3_task1
+        run: make help
